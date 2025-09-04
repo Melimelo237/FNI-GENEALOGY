@@ -10,7 +10,7 @@ import {
   Cpu,
   Zap
 } from 'lucide-react';
-import InteractiveD3Tree from '../components/genealogy/InteractiveD3Tree';
+import TreeVisualizationFixed from '../components/genealogy/TreeVisualizationFixed';
 
 const GenealogyPage = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -70,7 +70,7 @@ const GenealogyPage = () => {
 
       {/* Visualisation D3.js */}
       <div className="card p-0 overflow-hidden" style={{ height: '800px' }}>
-        <InteractiveD3Tree 
+        <TreeVisualizationFixed 
           initialPersonId={selectedPerson?.id}
           onNodeClick={handleNodeClick}
           height={800}
