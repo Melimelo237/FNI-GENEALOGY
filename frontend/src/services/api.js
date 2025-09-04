@@ -93,6 +93,7 @@ export const chatService = {
   }
 };
 
+
 export const healthService = {
   check: async () => {
     const response = await api.get('/health');
