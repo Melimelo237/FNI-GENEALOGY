@@ -1,7 +1,7 @@
 // ====================================
 // backend/src/services/GenealogyService.js
 const Person = require('../models/Person');
-const pool = require('../../db');
+const pool = require('../db');
 
 class GenealogyService {
   static async generateFamilyTree(personId, generations = 3) {
@@ -45,7 +45,7 @@ class GenealogyService {
           sexe,
           noms_pere,
           noms_mere
-        FROM naissance 
+        FROM backup_test 
         WHERE (noms_enfant = $1 OR noms_enfant = $2)
           AND date_naiss < $3
         ORDER BY date_naiss
@@ -90,7 +90,7 @@ class GenealogyService {
           sexe,
           noms_pere,
           noms_mere
-        FROM naissance 
+        FROM backup_test 
         WHERE (noms_pere LIKE $1 OR noms_mere LIKE $1)
           AND date_naiss > $2
         ORDER BY date_naiss
@@ -130,7 +130,7 @@ class GenealogyService {
           date_naiss,
           lieu_naiss,
           sexe
-        FROM naissance 
+        FROM backup_test 
         WHERE noms_pere = $1 
           AND noms_mere = $2 
           AND id != $3
