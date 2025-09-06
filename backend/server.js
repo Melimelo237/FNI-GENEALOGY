@@ -14,6 +14,7 @@ app.use(cors());
 app.use(morgan('combined'));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
+app.use('/api/real-bigdata', require('./src/routes/real-bigdata'));
 
 // Configuration DB
 const pool = require('./db');

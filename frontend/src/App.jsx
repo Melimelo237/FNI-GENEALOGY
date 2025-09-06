@@ -8,6 +8,7 @@ import GenealogyPage from './pages/GenealogyPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 import FraudDetectionPage from './pages/FraudDetectionPage';
 import ChatPage from './pages/ChatPage';
+import RealBigDataDashboard from './pages/RealBigDataDashboard';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/analytics" element={<AnalyticsPage />} />
             <Route path="/fraud" element={<FraudDetectionPage />} />
             <Route path="/chat" element={<ChatPage />} />
+            <Route path="/bigdata" element={<RealBigDataDashboard />} />
           </Routes>
         </main>
       </div>

@@ -11,7 +11,8 @@ import {
   Menu, 
   X,
   Home,
-  Users
+  Users,
+  Database
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -23,8 +24,9 @@ const Navbar = () => {
     { name: 'Recherche', href: '/search', icon: Search },
     { name: 'Généalogie', href: '/genealogy', icon: TreePine },
     { name: 'Analytics', href: '/analytics', icon: BarChart3 },
+    { name: 'Big Data', href: '/bigdata', icon: Database },
     { name: 'Détection Fraudes', href: '/fraud', icon: Shield },
-    { name: 'Assistant IA', href: '/chat', icon: MessageCircle },
+    { name: 'Assistant IA', href: '/chat', icon: MessageCircle }
   ];
 
   const isActive = (path) => location.pathname === path;
